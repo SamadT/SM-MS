@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <p>{{ org_name }}</p>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+<!--    <form method="post">-->
+<!--        {% if parametres %}-->
+<!--        {% for key, value in parametres.items %}-->
+<!--        <input id="{{ key }}">-->
+<!--        <label for="{{ key }}">{{ key }}</label>-->
+<!--        {% endfor %}-->
+<!--        <button>Submit</button>-->
+<!--        {% else %}-->
+<!--        <p>We've got some problems with data, please wait.</p>-->
+<!--        {% endif %}-->
+<!--    </form>-->
+</body>
+</html>

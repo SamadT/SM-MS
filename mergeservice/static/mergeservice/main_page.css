@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+.Line_1{
+    height: 3px;
+    width: 90%;
+    background: grey;
+    display: flex;
+    align-items: center;
+}
+.Line_2{
+    height: 3px;
+    width: 50px;
+    background: pink;
+}
+.tab_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    width: 90%;
+    list-style-type: none;
+}
+.tab_menu li{
+    color: black;z
+}
+.tab_menu li:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.tab_menu li:active{
+    color: blue;
+    opacity: 1;
+}
+.main_window{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+}

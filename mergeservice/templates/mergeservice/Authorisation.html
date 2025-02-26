@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Authorisation</title>
+    <link rel="stylesheet" href="{% static 'mergeservice/Authorisation.css' %}">
+</head>
+<body>
+    <header></header>
+    <section>
+        {% if messages %}
+        {% for message in messages %}
+            <p class="{{ message.tags }}">{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+        <a href="{% url 'mergeservice:Authorasation' link_name %}">{{ link_name }}</a>
+    </section>
+    <footer></footer>
+</body>
+</html>

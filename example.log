@@ -1,0 +1,130 @@
+ERROR:django.request:Internal Server Error: /join/qwe/
+Traceback (most recent call last):
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Join_company.post() got an unexpected keyword argument 'pk'
+INFO:django.utils.autoreload:C:\Users\Shurik\PycharmProjects\Old_python_project\Project\socialmerge\mergeservice\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /join/qwe/
+Traceback (most recent call last):
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Join_company.post() got an unexpected keyword argument 'pk'
+INFO:django.utils.autoreload:C:\Users\Shurik\PycharmProjects\Old_python_project\Project\socialmerge\mergeservice\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Shurik\PycharmProjects\Old_python_project\Project\socialmerge\mergeservice\views.py changed, reloading.
+INFO:mergeservice.views:asda
+INFO:mergeservice.views:asda
+INFO:mergeservice.views:asda
+INFO:mergeservice.views:asda
+INFO:mergeservice.views:asda
+INFO:mergeservice.views:asda
+INFO:mergeservice.views:fghfhdg
+INFO:mergeservice.views:users object (1)
+ERROR:django.request:Internal Server Error: /join/qwe/
+Traceback (most recent call last):
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: mergeservice_join_requests.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\Project\socialmerge\mergeservice\views.py", line 334, in post
+    if not join_requests.objects.filter(user=info.get('user'), organisation=info.get('org')):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\models\query.py", line 414, in __bool__
+    self._fetch_all()
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: mergeservice_join_requests.email
+ERROR:django.request:Internal Server Error: /authorisation/sign_up/
+Traceback (most recent call last):
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view mergeservice.views.view didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /authorisation/sign_up/
+Traceback (most recent call last):
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view mergeservice.views.view didn't return an HttpResponse object. It returned None instead.
+ERROR:django.request:Internal Server Error: /authorisation/sign_up/
+Traceback (most recent call last):
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Shurik\PycharmProjects\Old_python_project\venv_2\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view mergeservice.views.view didn't return an HttpResponse object. It returned None instead.

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'mergeservice/main_page.css' %}">
+</head>
+<body>
+    <header>
+        <p>Menu</p>
+        <div class="photo_class"></div>
+    </header>
+    <section class="main_window">
+        <ul class="tab_menu">
+            <li tab="1">Grants</li>
+            <li tab="2">Profit Companies</li>
+            <li tab="3">Non-profit Companies</li>
+        </ul>
+        <div class="Line_1">
+            <div class="Line_2"></div>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+        <div class="grant_window" data-tab="1">
+            {% if grants %}
+            {% for key_grant, value_grant in grants %}
+
+            {% endfor %}
+            {% else %}
+            <div class="absent_of_grants">Sorry, but we don't have any grants for this moment.</div>
+            {% endif %}
+        </div>
+        <div class="grant_window" data-tab="2">
+            {% if orgs_prof %}
+            {% for key_name, value_description in orgs_prof.items %}
+            <div>
+                <p>{{ key_name }}</p>
+                {% for i in value_description %}
+                <p>{{ i }}</p>
+                {% endfor %}
+                <button name="connect_to_{{ key_name }}">Connect</button>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="absent_of_grants">Sorry, but we don't have any orgs_prof for this moment.</div>
+            {% endif %}
+        </div>
+        <div class="grant_window" data-tab="3">
+            {% if orgs_non_prof %}
+            {% for key_name, value_description in orgs_non_prof.items %}
+            <div>
+                <p>{{ key_name }}</p>
+                {% for i in value_description %}
+                <p>{{ i }}</p>
+                {% endfor %}
+                <button name="connect_to_{{ key_name }}">Connect</button>
+                <button name="see_goal_of_{{ key_name }}">Help</button>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="absent_of_grants">Sorry, but we don't have any orgs_non_prof for this moment.</div>
+            {% endif %}
+        </div>
+        </form>
+    </section>
+    <footer>
+        <ul>
+            <li></li>
+        </ul>
+        <div>
+            <form method="post">
+                {% csrf_token %}
+                <button name="_about_us">About Us</button>
+            </form>
+        </div>
+    </footer>
+    <script src="{% static 'mergeservice/js/main_page.js' %}"></script>
+</body>
+</html>

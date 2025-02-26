@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 1rem;
+    background: blue;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+footer{
+    background: red;
+    width: 100%;
+    height: 1rem;
+}
+
+/*form{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}*/
