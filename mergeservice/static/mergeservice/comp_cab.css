@@ -1,0 +1,47 @@
+.find_block{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#input_filter{
+    width: 8em;
+    height: 1.5em;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+#button_filter{
+    border: none;
+    width: 4em;
+    height: 4em;
+    background-image: url('/static/mergeservice/images/search_icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#button_filter:hover{
+    opacity: 0.5;
+}
+#button_filter:active{
+    opacity: 1;
+}
+section div{
+    display: none;
+}
+.grants{
+    background: red;
+}
+.requests{
+    background: green;
+}
+.users{
+    background: yellow;
+}
+.confirm{
+    background: cyan;
+}
+.clicked_but{
+    color: red;
+}
+.checked_block{
+    display: block;
+}

@@ -26,7 +26,7 @@ class Sign_up_form(forms.Form):
     ])
     birth_date = forms.DateField(help_text='Your birthday(dd/mm/yyyy)', validators=[
             MinValueValidator(datetime.date(day=1, month=1, year=1700)),  # Minimum date: Jan 1, 2023
-            MaxValueValidator(datetime.date(day=31, month=12, year=2024)),  # Maximum date: Dec 31, 2023
+            MaxValueValidator(datetime.date.today()),  # Maximum date: Dec 31, 2023
         ], widget=forms.TextInput(attrs={'type': 'date'}), label="Birth date")
 
 class Authorisation_form(forms.Form):

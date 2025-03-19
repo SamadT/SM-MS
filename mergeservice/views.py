@@ -115,6 +115,9 @@ class Authorasation(generic.FormView):
                 else:
                     messages.error(request, "That user exists, try to log in!")
                     return render(request, 'mergeservice/Authorisation.html', {'link_name': "log_in", 'form': form})
+            else:
+                messages.error(request, "Oh, fuck!")
+                return render(request, 'mergeservice/Authorisation.html', {'link_name': "log_in", 'form': form})
 
             #Add invalid form
 
@@ -322,17 +325,22 @@ class Join_company(generic.ListView):
 
     def post(self, request, *args, **kwargs):
         form = forms.org_join(request.POST)
-        logger.info('asda')
+        logger.info(form)
         if form.is_valid():
             logger.info('fghfhdg')
             info = form.cleaned_data
             form.clean()
-            main_user = users.objects.get(login=str([key for key, value in ast.literal_eval(request.COOKIES.get('account_cookie')).items() if value == True])[2:-2])
-            org=organisations.objects.get(name=self.kwargs.get('pk'))
+            logger.info('fghfhdg1')
+            try:
+                main_user=users.objects.get(login=str([key for key, value in ast.literal_eval(request.COOKIES.get('account_cookie')).items() if value == True])[2:-2])
+                org=organisations.objects.get(name=self.kwargs.get('pk'))
+            except:
+                return self.end_with_error_messages(request, form)
+            logger.info('fghfhdg2')
             logger.info(main_user)
             info.update({"user": main_user, 'org': org})
             if not join_requests.objects.filter(user=info.get('user'), organisation=info.get('org')):
-                join_requests.objects.create(email=info.get('email'), user=info.get('user'), organisations=info.get('org'), description=info.get('description'), phone_number=info.get('phone_number'))
+                join_requests.objects.create(email=info.get('email'), user=info.get('user'), organisation=info.get('org'), description=info.get('description'), phone_number=info.get('phone_number'))
                 return self.end_with_success_messages(request, form)
         return self.end_with_error_messages(request, form)
 
