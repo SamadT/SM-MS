@@ -98,7 +98,7 @@ class grants(models.Model):
     currency = models.CharField(max_length=3)
     created_at = models.DateField()
     closed_at = models.DateField(null=True)
-    receiver_organisation_id = models.ForeignKey('organisations', on_delete=models.CASCADE, related_name='organisations_id')
+    receiver_organisation_id = models.ForeignKey('organisations', on_delete=models.CASCADE, related_name='organisations_id', null=True)
     #receiver
 
 # class grant_applications(models.Model):

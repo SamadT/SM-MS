@@ -2,11 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Personal cabinet of company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ static 'mergeservice/comp_cab.css' }}">
 </head>
 <body>
-  <section>
-
-  </section>
+    <div class="find_block">
+        <button id="button_filter" type="button" onclick="filter_request()"></button>
+        <input placeholder="Filter something..." id="input_filter">
+    </div>
+    <div class="select_section">
+        <button class="clicked_but" value='all' type="button">All</button>
+        <button value='grants' type="button">Grants</button>
+        <button value='requests' type="button">Requests</button>
+        <button value='users' type="button">Users</button>
+        <button value='confirm' type="button">Confirm</button>
+        <button disabled value='filtered' type="button">Filtered</button>
+    </div>
+    <section>
+        {% if dict_info_blocks %}
+            {% for cat, text_list in dict_info_blocks.items %}
+                {% for text in text_list %}
+                    <div class="{{ cat }} checked_block">{{ text }}</div>
+                {% endfor %}
+            {% endfor %}
+        {% else %}
+            <div>Something fucked up ▔\▁((.′◔_′◔.))▁/▔ (again....................)</div>
+        {% endif %}
+    </section>
+    <script src="{{ static 'mergeservice/js/comp.js' }}"></script>
 </body>
 </html>
