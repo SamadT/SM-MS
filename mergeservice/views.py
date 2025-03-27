@@ -298,6 +298,30 @@ class Company_creating(generic.ListView):
 
 class Company_cabinet(generic.DetailView):
 
+    def get(self, request):
+        count_of_true_accs = 0
+        key_value = ''
+        try:
+            cookies_dict = ast.literal_eval(request.COOKIES.get('account_cookie'))
+        except:
+            cookies_dict = None
+        if cookies_dict:
+            for key, value in cookies_dict.items():
+                if value == True:
+                    key_value += key
+                    count_of_true_accs += 1
+            if count_of_true_accs < 2 and count_of_true_accs > 0:
+                try:
+                    db_execution_users = users.objects.filter(login=key_value)
+                    logger.info(db_execution_users)
+                except:
+                    return HttpResponseRedirect('/authorisation/sign_up/')
+
+            else:
+                return HttpResponseRedirect('/authorisation/sign_up/')
+        else:
+            return HttpResponseRedirect('/authorisation/log_in/')
+
     def get_queryset(self):
         return None
 

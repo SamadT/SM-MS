@@ -10,6 +10,18 @@
     <header>
         <p>Menu</p>
         <div class="photo_class"></div>
+        <div class="floating_account_block">
+            <img id="click_menu" src="{% static 'mergeservice/images/acc_photo.webp' %}">
+            <div id="list_menu">
+                {% if comp_list %}
+                {% for comp_name in comp_list %}
+                <a href="{% url 'mergeservice:company_cabinet' comp_name %}">{{ comp_name }}</a>
+                {% endfor %}
+                {% else %}
+                <a href="{% url 'mergeservice:Company_creating' %}">Would you like create a company?</a>
+                {% endif %}
+            </div>
+        </div>
     </header>
     <section class="main_window">
         <ul class="tab_menu">
